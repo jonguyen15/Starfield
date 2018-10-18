@@ -1,15 +1,16 @@
-NormalParticle[] bob;
+Particle[] bob;
 void setup()
 {
   size(700,700);
-  bob = new NormalParticle[250];
+  bob = new Particle[250];
   for (int i= 0; i< bob.length;i++)
   {
    bob[i] = new NormalParticle();
-  }
+  }  
   bob[0] = new OddballParticle();
   bob[1] = new JumboParticle();
 }
+
 void draw()
 {
   background(0);
@@ -74,5 +75,3 @@ interface Particle
   public void move();
   public void show();
 }
-
-
